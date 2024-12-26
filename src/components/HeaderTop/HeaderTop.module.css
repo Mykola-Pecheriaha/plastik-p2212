@@ -1,0 +1,84 @@
+/* Контейнер для контактів */
+
+/* Бургер-кнопка праворуч */
+.burgerButton {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  max-width: 1200px;
+  top: 1px;
+  right: 20px; /* Розміщення кнопки бургер-меню справа */
+  z-index: 1100;
+  color: #4010ecff;
+}
+
+.burgerMenu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: #f53f3f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Контактна стрічка */
+.headerTop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f8e36eff;
+  padding: 10px;
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+.headerTop p,
+.headerTop a {
+  margin: 0 5px;
+  color: #2d08d3ff;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.headerTop a:hover {
+  text-decoration: underline;
+}
+
+/* Відображення на малих екранах */
+@media (max-width: 968px) {
+  .headerTop {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40ch; /* Ширина меню */
+    height: 30vh;
+    background-color: #f1d94fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  /* Показує контакти при відкритому меню */
+  .headerTop.show {
+    display: flex;
+  }
+
+  /* Бургер-кнопка для малих екранів */
+  .burgerButton {
+    display: block;
+  }
+
+  /* Бургер-кнопка для малих екранів */
+  .burgerButton {
+    display: block;
+    top: 1px; /* Піднімаємо кнопку трохи вгору */
+    right: 20px;
+  }
+}

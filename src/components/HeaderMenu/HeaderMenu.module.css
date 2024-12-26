@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffffff;
+  border-bottom: 1px solid #c5bcbc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: 1; /* Щоб компоненти переносилися на новий рядок, якщо місця недостатньо */
+}
+
+.menuItem {
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+
+.subMenu {
+  position: absolute;
+  top: 100%; /* Відображати нижче меню */
+  left: 0;
+  background-color: #f0efbfff;
+  border: 1px solid #8d8888;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.subMenuColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* .burger {
+  display: none;
+  cursor: pointer;
+} */
+
+/* Стилі для бургер-меню */
+.burger {
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto; /* Завжди праворуч */
+  color: brown;
+}
+
+.burgerMenu {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  background-color: #fcd734;
+  border: 1px solid hsl(49, 93%, 33%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Медіазапити для адаптивності */
+@media (max-width: 1024px) {
+  .nav > *:nth-child(4) {
+    display: none; /* Приховуємо останній елемент меню поступово */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav > *:nth-child(3) {
+    display: none; /* Приховуємо ще один елемент меню поступово */
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    display: none; /* Повністю приховуємо меню на дуже малих екранах */
+  }
+}

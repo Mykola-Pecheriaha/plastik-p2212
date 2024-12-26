@@ -1,21 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #9fc6e0f1;
+  color: #72740aff;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1d31eb;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 5px;
+  width: 100%;
+  max-width: 1200px; /* Узгоджена ширина з хедером */
+  margin: 0 auto;
+  min-height: calc(
+    100vh - 200px
+  ); /* Регулює висоту з урахуванням хедера, контактної стрічки та футера */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.headerContainer {
+  max-width: 1200px; /* Максимальна ширина для центрування */
+  margin: 0 auto;
+  width: 100%;
+  position: sticky; /* Фіксує елемент на екрані при прокручуванні */
+  top: 0;
+  z-index: 1000; /* Встановлює пріоритет, щоб було поверх інших елементів */
+  background-color: #c6f8a5f3; /* Задає фон для уникнення прозорості */
+  box-shadow: 0 2px 5px rgba(80, 77, 235, 0.432); /* Опційно: додає тінь */
 }
