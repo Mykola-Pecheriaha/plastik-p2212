@@ -31,7 +31,7 @@ export default function RootLayout({
           <HeaderTop />
           <HeaderMenu />
         </div>
-        {children}
+        <div className="container">{children}</div>
       </body>
     </html>
   )
