@@ -22,9 +22,9 @@ const BigBord: React.FC = () => {
         </div>
         <div className={styles.bigImage}>
           <Image
-            src="/images/bigBort/pecheriaha11.JPG" // Шлях до зображення з папки public
+            src="/images/bigBort/IMG_79941-removebg-preview.png" // Шлях до зображення з папки public
             alt="Doctor"
-            width={350}
+            width={450}
             height={430}
           />
         </div>
