@@ -5,6 +5,9 @@
   padding: 10px 20px;
   background-color: #fcf8f8ff;
   border-bottom: 1px solid #c5bcbc;
+  position: sticky; /* Закріплює хедер у верхній частині */
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -34,7 +37,7 @@
 
 .subMenu {
   position: absolute;
-  top: 100%; /* Відображати нижче меню */
+  top: 100%;
   left: 0;
   background-color: #f0efbfff;
   border: 1px solid #8d8888;
@@ -44,6 +47,14 @@
   flex-direction: column;
   gap: 5px;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menuItem:hover .subMenu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .subMenuColumn {
@@ -77,23 +88,44 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 1000;
 }
 
 /* Медіазапити для адаптивності */
 @media (max-width: 1024px) {
-  .nav > *:nth-child(4) {
+  .nav > *:nth-child(5) {
     display: none; /* Приховуємо останній елемент меню поступово */
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+  .nav > *:nth-child(4) {
+    display: none; /* Приховуємо ще один елемент меню поступово */
+  }
+}
+
+@media (max-width: 868px) {
   .nav > *:nth-child(3) {
     display: none; /* Приховуємо ще один елемент меню поступово */
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 776px) {
   .nav {
     display: none; /* Повністю приховуємо меню на дуже малих екранах */
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column; /* Ставимо елементи в колонку */
+    align-items: flex-start;
+  }
+  .logo {
+    margin-bottom: 10px; /* Відступ між логотипом і рештою */
+  }
+  .burgerMenu {
+    width: 100%; /* Робимо меню на всю ширину */
+    right: 0;
+    top: calc(100% + 10px); /* Відступ від хедера */
   }
 }

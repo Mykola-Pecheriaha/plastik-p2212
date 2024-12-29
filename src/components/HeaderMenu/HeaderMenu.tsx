@@ -36,51 +36,127 @@ const HeaderMenu: React.FC = () => {
 
           <div
             className={styles.menuItem}
+            onMouseEnter={() => handleSubMenuToggle('gallery')}
+            onMouseLeave={() => handleSubMenuToggle(null as string | null)}
+          >
+            <Link href="/gallery">Галерея результатів ▼</Link>
+            {activeSubMenu === 'gallery' && (
+              <div className={styles.subMenu}>
+                <div className={styles.subMenuSection}>
+                  <p>Пластика обличчя</p>
+                  <div className={styles.subMenuColumn}>
+                    <Link href="/gallery/face-lift">Підтяжка обличчя</Link>
+                    <Link href="/gallery/blefaro-plastic">Блефаропластика</Link>
+                    <Link href="/gallery/chino-plasty">
+                      Пластика підборіддя
+                    </Link>
+                    <Link href="/gallery/flap-correction">
+                      Корекція клаповухості
+                    </Link>
+                    <Link href="/gallery/lapp-otto">Пластика дольки вуха</Link>
+                  </div>
+                </div>
+
+                <div className={styles.subMenuSection}>
+                  <p>Пластика грудей</p>
+                  <div className={styles.subMenuColumn}>
+                    <Link href="/gallery/breast-augmentation">
+                      Збільшення грудей
+                    </Link>
+                    <Link href="/gallery/breast-reduction">
+                      Зменшення грудей
+                    </Link>
+                    <Link href="/gallery/breast-lift">Підтяжка грудей</Link>
+                    <Link href="/gallery/areola-correction">
+                      Корекція соска та ареоли
+                    </Link>
+                    <Link href="/gallery/breast-asymmetry-correction">
+                      Корекція асиметрії грудей
+                    </Link>
+                  </div>
+                </div>
+
+                <div className={styles.subMenuSection}>
+                  <div className={styles.subMenuColumn}>
+                    <p>Пластика тіла</p>
+                    <Link href="/gallery/abdominoplasty">Абдомінопластика</Link>
+                    <Link href="/gallery/liposuction">Ліпосакція</Link>
+                    <Link href="/gallery/leg-plastic">Пластика ніг</Link>
+                    <Link href="/gallery/cervical-hump">
+                      Видалення шийного горба
+                    </Link>
+                    <Link href="/gallery/buttock-augmentation">
+                      Збільшення сідниць
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div
+            className={styles.menuItem}
             onMouseEnter={() => handleSubMenuToggle('services')}
             onMouseLeave={() => handleSubMenuToggle(null as string | null)}
           >
             <Link href="/services">Послуги ▼</Link>
             {activeSubMenu === 'services' && (
               <div className={styles.subMenu}>
-                <div className={styles.subMenuColumn}>
+                <div className={styles.subMenuSection}>
                   <p>Пластика обличчя</p>
-                  <Link href="/services/liftFace">Підтяжка обличчя та шиї</Link>
-                  <Link href="/services/blepharoplasty">Блефаропластика</Link>
-                  <Link href="/services/chinoplasty">Пластика підборіддя</Link>
-                  <Link href="/services/correctionEarFlaps">
-                    Корекція клаповухості
-                  </Link>
-                  <Link href="/services/otoplasty">Отопластика</Link>
+                  <div className={styles.subMenuColumn}>
+                    <Link href="/services/face-lift">
+                      Підтяжка обличчя та шиї
+                    </Link>
+                    <Link href="/services/blefaro-plastic">
+                      Блефаропластика
+                    </Link>
+                    <Link href="/services/chino-plasty">
+                      Пластика підборіддя
+                    </Link>
+                    <Link href="/services/flap-correction">
+                      Корекція клаповухості
+                    </Link>
+                    <Link href="/services/lapp-otto">Пластика дольки вуха</Link>
+                  </div>
                 </div>
-                <div className={styles.subMenuColumn}>
+                <div className={styles.subMenuSection}>
                   <p>Пластика грудей</p>
-                  <Link href="/services/breastAugmentation">
-                    Збільшення грудей
-                  </Link>
-                  <Link href="/services/breastReduction">Зменшення грудей</Link>
-                  <Link href="/services/breastLift">Підтяжка грудей</Link>
-                  <Link href="/services/areolaCorrection">
-                    Корекція соска та ареоли
-                  </Link>
-                  <Link href="/services/correctionBreastAsymmetry">
-                    Корекція асиметрії грудей
-                  </Link>
+                  <div className={styles.subMenuColumn}>
+                    <Link href="/services/breast-augmentation">
+                      Збільшення грудей
+                    </Link>
+                    <Link href="/services/breast-reduction">
+                      Зменшення грудей
+                    </Link>
+                    <Link href="/services/breast-lift">Підтяжка грудей</Link>
+                    <Link href="/services/areola-correction">
+                      Корекція соска та ареоли
+                    </Link>
+                    <Link href="/services/breast-asymmetry-correction">
+                      Корекція асиметрії грудей
+                    </Link>
+                  </div>
                 </div>
-                <div className={styles.subMenuColumn}>
+                <div className={styles.subMenuSection}>
                   <p>Пластика тіла</p>
-                  <Link href="/services/abdominoplasty">Абдомінопластика</Link>
-                  <Link href="/services/liposuction">Ліпосакція</Link>
-                  <Link href="/services/legPlasticSurgery">Пластика ніг</Link>
-                  <Link href="/services/cervicalHumpRemoval">
-                    Видалення шийного горба
-                  </Link>
-                  <Link href="/services/buttockAugmentation">
-                    Збільшення сідниць
-                  </Link>
+                  <div className={styles.subMenuColumn}>
+                    <Link href="/services/abdominoplasty">
+                      Абдомінопластика
+                    </Link>
+                    <Link href="/services/liposuction">Ліпосакція</Link>
+                    <Link href="/services/leg-plastic">Пластика ніг</Link>
+                    <Link href="/services/cervical-hump">
+                      Видалення шийного горба
+                    </Link>
+                    <Link href="/services/buttock-augmentation">
+                      Збільшення сідниць
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}
           </div>
+          {/* Інші розділи */}
           <div
             className={styles.menuItem}
             onMouseEnter={() => handleSubMenuToggle('aboutDoctor')}
@@ -100,27 +176,22 @@ const HeaderMenu: React.FC = () => {
               </div>
             )}
           </div>
+
           <div
             className={styles.menuItem}
             onMouseEnter={() => handleSubMenuToggle('operating')}
             onMouseLeave={() => handleSubMenuToggle(null as string | null)}
           >
-            <Link href="/operating">Відділення ▼</Link>
+            <Link href="/operating">Відділення▼</Link>
             {activeSubMenu === 'operating' && (
               <div className={styles.subMenu}>
-                <Link href="/operating/operatingRoom">
-                  Переглянути операційну
+                <Link href="/operating/operatingRoom">Операційна</Link>
+                <Link href="/operating/reviews">Підготовка до операції</Link>
+                <Link href="/operating/preparation">Операційні моменти</Link>
+                <Link href="/operating/postoperative">
+                  Післяопераційні моменти
                 </Link>
-                <Link href="/operating/preparationOperation">
-                  Підготовка до операції
-                </Link>
-                <Link href="/operating/postoperativeWards">
-                  {' '}
-                  Післяопераційні палати
-                </Link>
-                <Link href="/operating/postoperativeRehabilitation">
-                  Реабілітація після операції
-                </Link>
+                <Link href="/operating/rehabilitation">Реабілітація</Link>
               </div>
             )}
           </div>
@@ -135,7 +206,9 @@ const HeaderMenu: React.FC = () => {
             <Link href="/" onClick={toggleMenu}>
               Головна
             </Link>
-
+            <Link href="/gallery" onClick={toggleMenu}>
+              Галерея
+            </Link>
             <Link href="/services" onClick={toggleMenu}>
               Послуги
             </Link>

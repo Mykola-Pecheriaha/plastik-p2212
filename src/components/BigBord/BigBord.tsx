@@ -11,13 +11,13 @@ const BigBord: React.FC = () => {
         <div className={styles.bigText}>
           <h1 className={styles.mainTitle}>Печеряга Микола Миколайович</h1>
           <h4 className={styles.subTitle}>
-            Лікар пластичної та загальної хірургії.
+            Лікар пластичної та загальної хірургії
           </h4>
 
           {/* Кнопка "Зв'язатися з нами" */}
           {/* Використовуємо Link для кнопки */}
           <Link href="/hospital/contacts" passHref>
-            <button className={styles.contactButton}>Звязатися з нами</button>
+            <button className={styles.contactButton}>Зв`язатися з нами</button>
           </Link>
         </div>
         <div className={styles.bigImage}>
