@@ -36,58 +36,33 @@ const HeaderMenu: React.FC = () => {
 
           <div
             className={styles.menuItem}
-            onMouseEnter={() => handleSubMenuToggle('gallery')}
+            onMouseEnter={() => handleSubMenuToggle('results')}
             onMouseLeave={() => handleSubMenuToggle(null as string | null)}
           >
-            <Link href="/gallery">Галерея результатів ▼</Link>
-            {activeSubMenu === 'gallery' && (
+            <Link href="/results">Результати ↓ </Link>
+            {activeSubMenu === 'results' && (
               <div className={styles.subMenu}>
                 <div className={styles.subMenuSection}>
-                  <p>Пластика обличчя</p>
+                  {/* <p>Пластика обличчя</p> */}
                   <div className={styles.subMenuColumn}>
-                    <Link href="/gallery/face-lift">Підтяжка обличчя</Link>
-                    <Link href="/gallery/blefaro-plastic">Блефаропластика</Link>
-                    <Link href="/gallery/chino-plasty">
-                      Пластика підборіддя
-                    </Link>
-                    <Link href="/gallery/flap-correction">
-                      Корекція клаповухості
-                    </Link>
-                    <Link href="/gallery/lapp-otto">Пластика дольки вуха</Link>
-                  </div>
-                </div>
+                    <Link href="/results/face-plastic">Пластика обличчя</Link>
 
-                <div className={styles.subMenuSection}>
-                  <p>Пластика грудей</p>
-                  <div className={styles.subMenuColumn}>
-                    <Link href="/gallery/breast-augmentation">
-                      Збільшення грудей
-                    </Link>
-                    <Link href="/gallery/breast-reduction">
-                      Зменшення грудей
-                    </Link>
-                    <Link href="/gallery/breast-lift">Підтяжка грудей</Link>
-                    <Link href="/gallery/areola-correction">
-                      Корекція соска та ареоли
-                    </Link>
-                    <Link href="/gallery/breast-asymmetry-correction">
-                      Корекція асиметрії грудей
+                    <Link href="/results/otto-plastic">
+                      Пластика вушних раковин
                     </Link>
                   </div>
                 </div>
 
                 <div className={styles.subMenuSection}>
                   <div className={styles.subMenuColumn}>
-                    <p>Пластика тіла</p>
-                    <Link href="/gallery/abdominoplasty">Абдомінопластика</Link>
-                    <Link href="/gallery/liposuction">Ліпосакція</Link>
-                    <Link href="/gallery/leg-plastic">Пластика ніг</Link>
-                    <Link href="/gallery/cervical-hump">
-                      Видалення шийного горба
-                    </Link>
-                    <Link href="/gallery/buttock-augmentation">
-                      Збільшення сідниць
-                    </Link>
+                    <Link href="/results/breast-plastic">Пластика грудей</Link>
+                  </div>
+                </div>
+
+                <div className={styles.subMenuSection}>
+                  <div className={styles.subMenuColumn}>
+                    <Link href="/results/bodi-plastic">Пластика тіла</Link>
+                    <Link href="/results/tumors-skin">Пухлини шкіри</Link>
                   </div>
                 </div>
               </div>
@@ -98,7 +73,7 @@ const HeaderMenu: React.FC = () => {
             onMouseEnter={() => handleSubMenuToggle('services')}
             onMouseLeave={() => handleSubMenuToggle(null as string | null)}
           >
-            <Link href="/services">Послуги ▼</Link>
+            <Link href="/services">Послуги ↓</Link>
             {activeSubMenu === 'services' && (
               <div className={styles.subMenu}>
                 <div className={styles.subMenuSection}>
@@ -162,7 +137,7 @@ const HeaderMenu: React.FC = () => {
             onMouseEnter={() => handleSubMenuToggle('aboutDoctor')}
             onMouseLeave={() => handleSubMenuToggle(null as string | null)}
           >
-            <Link href="/aboutDoctor">Про лікаря ▼</Link>
+            <Link href="/aboutDoctor">Про лікаря ↓</Link>
             {activeSubMenu === 'aboutDoctor' && (
               <div className={styles.subMenu}>
                 <Link href="/aboutDoctor/team">Команда</Link>
@@ -182,7 +157,7 @@ const HeaderMenu: React.FC = () => {
             onMouseEnter={() => handleSubMenuToggle('operating')}
             onMouseLeave={() => handleSubMenuToggle(null as string | null)}
           >
-            <Link href="/operating">Відділення▼</Link>
+            <Link href="/operating">Відділення ↓</Link>
             {activeSubMenu === 'operating' && (
               <div className={styles.subMenu}>
                 <Link href="/operating/operatingRoom">Операційна</Link>
