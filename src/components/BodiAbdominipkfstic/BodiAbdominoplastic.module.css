@@ -1,0 +1,71 @@
+.bodiAbdominoplastic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Для адаптивності на маленьких екранах */
+  padding: 20px;
+  background-color: #f9f9f9; /* Світлий фон для відображення контенту */
+}
+
+.containerBodiAb {
+  display: flex;
+  flex-direction: row; /* Розташування елементів в рядок */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bodiAbText {
+  flex: 1; /* Займає всю доступну висоту в контейнері */
+  padding: 20px;
+}
+
+.bodiAbText h1 {
+  padding-bottom: 20px;
+}
+
+.mainTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.subTitle {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.subTitle h4 {
+  padding-bottom: 15px;
+}
+
+.bigImage {
+  flex: 1; /* Займає рівну частину з текстовим блоком */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigImage img {
+  max-width: 100%;
+  height: auto; /* Для адаптивності */
+  border-radius: 8px; /* Згладжені кути */
+}
+
+@media (max-width: 768px) {
+  .containerBodiAb {
+    flex-direction: column; /* Перехід на стовпчик */
+    align-items: center;
+  }
+
+  .bodiAbText {
+    text-align: center;
+  }
+
+  .bigImage {
+    margin-top: 20px;
+  }
+}

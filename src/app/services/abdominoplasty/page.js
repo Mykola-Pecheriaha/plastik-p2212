@@ -1,7 +1,12 @@
 import React from 'react'
+import BodiAbdominoplastic from '../../../components/BodiAbdominipkfstic/BodiAbdominoplastic.tsx'
 
 const Abdominoplasty = () => {
-  return <div>Abdominoplasty - Сайт в розробці</div>
+  return (
+    <div>
+      <BodiAbdominoplastic />
+    </div>
+  )
 }
 
 export default Abdominoplasty

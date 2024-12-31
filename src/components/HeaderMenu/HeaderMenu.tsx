@@ -181,8 +181,8 @@ const HeaderMenu: React.FC = () => {
             <Link href="/" onClick={toggleMenu}>
               Головна
             </Link>
-            <Link href="/gallery" onClick={toggleMenu}>
-              Галерея
+            <Link href="/results" onClick={toggleMenu}>
+              Результати
             </Link>
             <Link href="/services" onClick={toggleMenu}>
               Послуги

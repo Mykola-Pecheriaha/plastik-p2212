@@ -1,0 +1,43 @@
+/* Контейнер для карточок */
+.cardContainer {
+  display: flex; /* Використовуємо flexbox */
+  justify-content: space-between; /* Відступи між картками */
+  flex-wrap: wrap; /* Якщо ширини не вистачає, картки переносяться на новий ряд */
+  gap: 20px; /* Відстань між картками */
+  padding: 20px; /* Відступи від країв контейнера */
+}
+
+.card {
+  flex: 1 0 calc(20% - 10px); /* Кожна картка займає приблизно 20% ширини */
+  max-width: calc(20% - 10px); /* Обмеження максимальної ширини */
+  min-width: 150px; /* Мінімальна ширина картки */
+  box-sizing: border-box; /* Урахування padding у розмірах */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Збільшення карточки при наведенні */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Посилена тінь */
+}
+
+/* Заголовок карточки */
+.card h3 {
+  font-size: 1rem;
+  margin: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* Опис карточки */
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Зображення */
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd; /* Розділення зображення і тексту */
+}
