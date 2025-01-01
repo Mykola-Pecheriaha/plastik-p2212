@@ -55,6 +55,11 @@
   border-radius: 8px; /* Згладжені кути */
 }
 
+.bodiAbSectorText {
+  margin: 20px;
+  font-size: 20px;
+}
+
 @media (max-width: 768px) {
   .containerBodiAb {
     flex-direction: column; /* Перехід на стовпчик */

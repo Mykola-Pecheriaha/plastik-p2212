@@ -8,7 +8,7 @@ const CardsPage: React.FC = () => {
       <Cards
         title="Досвідчені хірурги"
         description="Працює команда професіоналів з досвідом більше ніж 16 років"
-        imageUrl="/images/iconci/cartca1.jpg"
+        imageUrl="/images/iconci/icon7.jpg"
       />
       <Cards
         title="Сучасні методики"
@@ -18,7 +18,7 @@ const CardsPage: React.FC = () => {
       <Cards
         title="Бездоганна репутація"
         description="Більшість пацієнток приходить по рекомендації від подружок та знайомих"
-        imageUrl="/images/iconci/cartca4.jpg"
+        imageUrl="/images/iconci/icon8.png"
       />
       <Cards
         title="Онлайн консультація"

@@ -1,0 +1,43 @@
+/* BodiAbdominoplastic.module.css */
+.examplesWorkAbdomin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.containerExamples {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.examplesText {
+  flex: 1;
+}
+
+.examplesText h1 {
+  margin-bottom: 20px;
+}
+
+.examplesTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.subTitle ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.bigImage {
+  flex: 1;
+  position: relative;
+  text-align: center; /* Центрування тексту горизонтально */
+  padding-bottom: 30px; /* Додатковий відступ згори */
+}
