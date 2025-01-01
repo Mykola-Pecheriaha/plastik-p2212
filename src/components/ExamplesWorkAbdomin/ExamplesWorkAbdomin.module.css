@@ -41,3 +41,31 @@
   text-align: center; /* Центрування тексту горизонтально */
   padding-bottom: 30px; /* Додатковий відступ згори */
 }
+
+@media (max-width: 768px) {
+  .containerExamples {
+    flex-direction: column; /* Перехід на стовпчик */
+    align-items: center; /* Вирівнювання по центру */
+  }
+
+  .examplesText {
+    text-align: center; /* Центрування тексту */
+    padding: 0 15px; /* Додаткові відступи для зручності читання */
+  }
+
+  .examplesTitle {
+    font-size: 20px; /* Зменшення розміру заголовка */
+  }
+
+  .subTitle ul {
+    font-size: 18px; /* Менший розмір тексту списку */
+    margin-left: 0; /* Центрування списку */
+    padding: 0;
+  }
+
+  .bigImage {
+    margin-top: 20px; /* Відступ між текстом і зображенням */
+    width: 100%; /* Зображення займає всю ширину */
+    text-align: center; /* Центрування зображення */
+  }
+}
