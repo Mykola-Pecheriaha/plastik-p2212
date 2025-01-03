@@ -28,12 +28,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
-        <div className="headerContainer">
-          <HeaderTop />
-          <HeaderMenu />
-          <Breadcrumb />
-        </div>
-        <div className="container">{children}</div>
+        {/* Хедер */}
+        <header className="headerWrapper">
+          <div className="headerContainer">
+            <HeaderTop />
+            <HeaderMenu />
+            <Breadcrumb />
+          </div>
+        </header>
+
+        {/* Основний контент */}
+        <main className="container">{children}</main>
+
+        {/* Футер */}
+        <footer className="footerWrapper">
+          <div className="footerContainer">
+            <p>© 2024 Plastik-p2212. All rights reserved.</p>
+          </div>
+        </footer>
       </body>
     </html>
   )

@@ -1,48 +1,64 @@
+/* Скидання стилів */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Стилі для body */
 body {
-  background: #9fc6e0f1;
+  background: #e0d69ff1;
   color: #1b0a0aff;
-  margin: 0;
-  padding: 0;
+  font-family: var(--font-geist-sans);
 }
 
+/* Контейнер для контенту */
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Встановлюємо максимальну ширину */
+  margin: 0 auto;
+  min-height: calc(
+    100vh - 200px
+  ); /* Вираховуємо висоту, враховуючи хедер і футер */
+  background-color: #f9fcfbf3;
+}
+
+/* Загальний wrapper для хедера */
+.headerWrapper {
+  background-color: #f0f18df3; /* Фон для всієї ширини */
+  box-shadow: 0 2px 5px rgba(231, 228, 5, 0.562); /* Тінь для хедера */
+}
+
+.headerContainer {
+  max-width: 1200px; /* Центруємо контент */
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* Загальний wrapper для футера */
+.footerWrapper {
+  background-color: #1b0a0aff; /* Темний фон для футера */
+  color: #fff; /* Білий текст */
+  padding: 20px 0;
+}
+
+.footerContainer {
+  max-width: 1200px; /* Центруємо контент */
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* Посилання */
 a {
   text-decoration: none;
   color: #1d31eb;
-  margin-left: 20px;
+  margin: 0 10px;
   font-size: 1.1rem;
-  margin-right: 20px;
-  padding-right: 20px;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-.container {
-  padding: 5px;
-  width: 100%;
-  max-width: 1400px; /* Узгоджена ширина з хедером */
-  margin: 0 auto;
-  min-height: calc(
-    100vh - 200px
-  ); /* Регулює висоту з урахуванням хедера, контактної стрічки та футера */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.headerContainer {
-  max-width: 1400px; /* Максимальна ширина для центрування */
-  margin: 0 auto;
-  width: 100%;
-  position: sticky; /* Фіксує елемент на екрані при прокручуванні */
-  top: 0;
-  z-index: 1000; /* Встановлює пріоритет, щоб було поверх інших елементів */
-  background-color: #c6f8a5f3; /* Задає фон для уникнення прозорості */
-  box-shadow: 0 2px 5px rgba(80, 77, 235, 0.432); /* Опційно: додає тінь */
 }

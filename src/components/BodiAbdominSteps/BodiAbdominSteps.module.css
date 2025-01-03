@@ -1,0 +1,149 @@
+.bodiAbdominStepsContainer {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #dbf068bd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.671);
+}
+
+.bodiAbdominStepsTitle {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Однакова ширина */
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  min-height: 150px; /* Забезпечує однакову висоту для блоків */
+}
+
+.bodiAbdominStepsText {
+  max-width: 70%;
+  background-color: #f7f1a1bd;
+  border-bottom: 2px solid #24f31d;
+  padding: 10px;
+}
+
+.bodiAbdominStepsImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 30%;
+}
+
+.bodiAbdominStepsImage img {
+  width: 280px;
+  height: auto;
+  border-radius: 3%;
+  border: 2px solid #1d1c1c;
+}
+
+.bodiAbdominStepsContainer h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #5277dd;
+}
+
+.bodiAbdominStepsSection h3 {
+  font-size: 1.4em;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b2d3f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  border-bottom: 2px solid #0b52d4;
+  min-height: 50px; /* Забезпечує однакову висоту для заголовків */
+}
+
+.bodiAbdominStepsSection h3:hover {
+  background-color: #0b8cbe;
+}
+
+.bodiAbdominStepsSection h3 span {
+  font-size: 0.8em;
+}
+
+.bodiAbdominStepsSection ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #252222;
+  line-height: 1.6;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.bodiAbdominStepsSection ul li {
+  padding: 5px 0;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+.bodiAbdominStepsText p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.bodiAbdominStepsText h4 {
+  font-size: 1.1em;
+  color: #e6076f;
+  margin: 5px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bodiAbdominStepsText h5 {
+  font-size: 1.5em;
+  color: #f107ca;
+  margin: 5px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.bodiAbdominStepsText strong {
+  font-size: 1.2em;
+  color: #0b52d4;
+}
+
+.bodiAbdominStepsText b {
+  font-size: 1.3em;
+  color: #e72b6a;
+}
+
+/* Адаптивність для екранів менших розмірів */
+@media (max-width: 768px) {
+  .bodiAbdominStepsTitle {
+    flex-direction: column; /* Вертикальне розташування елементів на менших екранах */
+    min-height: auto; /* Автоматична висота для компактності */
+  }
+
+  .bodiAbdominStepsImage {
+    gap: 10px; /* Менший проміжок між зображеннями для компактності */
+    max-width: 100%;
+  }
+
+  .bodiAbdominStepsText {
+    max-width: 100%; /* На всю ширину екрану */
+  }
+
+  .bodiAbdominStepsSection h3 {
+    font-size: 1.2em; /* Зменшення шрифту для компактності */
+  }
+}
