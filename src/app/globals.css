@@ -1,64 +1,39 @@
-/* Скидання стилів */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Змінна для висоти хедера */
+:root {
+  --header-height: 120px; /* Задаємо висоту хедера */
 }
 
-/* Стилі для body */
-body {
-  background: #e0d69ff1;
-  color: #1b0a0aff;
-  font-family: var(--font-geist-sans);
-}
-
-/* Контейнер для контенту */
-.container {
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px; /* Встановлюємо максимальну ширину */
-  margin: 0 auto;
-  min-height: calc(
-    100vh - 200px
-  ); /* Вираховуємо висоту, враховуючи хедер і футер */
-  background-color: #f9fcfbf3;
-}
-
-/* Загальний wrapper для хедера */
+/* Хедер */
 .headerWrapper {
-  background-color: #f0f18df3; /* Фон для всієї ширини */
-  box-shadow: 0 2px 5px rgba(231, 228, 5, 0.562); /* Тінь для хедера */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
 }
 
-.headerContainer {
-  max-width: 1200px; /* Центруємо контент */
-  margin: 0 auto;
-  width: 100%;
+/* Крихти */
+.breadcrumbWrapper {
+  margin-top: var(--header-height);
+  /* Відступ після хедера */
   padding: 10px 20px;
+  background-color: #f9fcfb;
+  border-bottom: 1px solid #ddd; /* Розділ між крихтами та контентом */
+  z-index: 999;
 }
 
-/* Загальний wrapper для футера */
-.footerWrapper {
-  background-color: #1b0a0aff; /* Темний фон для футера */
-  color: #fff; /* Білий текст */
-  padding: 20px 0;
-}
-
-.footerContainer {
-  max-width: 1200px; /* Центруємо контент */
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-/* Посилання */
-a {
-  text-decoration: none;
-  color: #1d31eb;
-  margin: 0 10px;
-  font-size: 1.1rem;
-}
-
-a:hover {
-  text-decoration: underline;
+/* Основний контент */
+.mainContainer {
+  margin-top: calc(
+    var(--header-height) - 150px
+  ); /* Відступ для хедера та крихт */
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9fcfbf3;
 }

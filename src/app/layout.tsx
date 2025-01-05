@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+
 import HeaderTop from '../components/HeaderTop/HeaderTop'
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu'
-import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,19 +27,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Хедер */}
-        <header className="headerWrapper">
-          <div className="headerContainer">
-            <HeaderTop />
-            <HeaderMenu />
-            <Breadcrumb />
-          </div>
-        </header>
+        <div className="headerWrapper">
+          <HeaderTop />
+          <HeaderMenu />
+        </div>
+
+        {/* Крихти */}
+        <div className="breadcrumbWrapper">
+          <Breadcrumb />
+        </div>
 
         {/* Основний контент */}
-        <main className="container">{children}</main>
+        <main className="mainContainer">{children}</main>
 
         {/* Футер */}
         <footer className="footerWrapper">

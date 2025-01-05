@@ -5,6 +5,7 @@ import styles from './BodiAbdominoplastic.module.css'
 import CardsPage from '../CardsPage/CardsPage'
 import ExamplesWorkAbdomin from '../ExamplesWorkAbdomin/ExamplesWorkAbdomin'
 import BodiAbdominSteps from '../BodiAbdominSteps/BodiAbdominSteps'
+import PlasticSurgeons from '../PlasticSurgeons/PlasticSurgeons'
 
 const BodiAbdominoplastic: React.FC = () => {
   return (
@@ -65,6 +66,9 @@ const BodiAbdominoplastic: React.FC = () => {
       </div>
       <div className={styles.section}>
         <BodiAbdominSteps />
+      </div>
+      <div className={styles.section}>
+        <PlasticSurgeons />
       </div>
     </div>
   )

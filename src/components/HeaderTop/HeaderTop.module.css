@@ -1,84 +1,100 @@
-/* Контейнер для контактів */
+/* Загальні стилі */
+.headerTop {
+  position: relative; /* Замінили fixed на relative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  box-sizing: border-box;
+  z-index: 1100;
+  display: flex;
+  justify-content: space-between;
+  transition: top 0.3s ease;
+  flex-wrap: nowrap; /* Не даємо елементам перейти на новий рядок */
+  align-items: center;
+}
 
-/* Бургер-кнопка праворуч */
+/* Клас для відображення бургер-меню */
 .burgerButton {
   display: none;
-  font-size: 1.5rem;
+  z-index: 1200;
   background: none;
   border: none;
+  font-size: 30px;
   cursor: pointer;
-  position: absolute;
-  max-width: 1200px;
-  top: 1px;
-  right: 20px; /* Розміщення кнопки бургер-меню справа */
-  z-index: 1100;
-  color: #4010ecff;
+  position: absolute; /* Розміщує бургер-меню на абсолютній позиції */
+  right: 20px; /* Розташовує бургер справа */
+  top: 50%; /* Центрує бургер по вертикалі */
+  transform: translateY(-50%); /* Коригує точку центру */
 }
 
 .burgerMenu {
+  display: none; /* Сховати бургер-меню за замовчуванням */
+  background-color: #f8f9fa;
+  padding: 20px;
   position: absolute;
-  top: 50px;
-  right: 10px;
-  background-color: #f53f3f;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+  top: 60px; /* Відступ від бургер-кнопки */
+  right: 20px; /* Відступ справа */
+  width: 200px; /* Ширина бургер-меню */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Контактна стрічка */
-.headerTop {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #f8e36eff;
-  padding: 10px;
-  font-size: 0.6rem;
-  transition: transform 0.3s ease;
+.burgerMenu.show {
+  display: block; /* Показуємо бургер-меню при відкритті */
 }
 
+/* Стилі для контактної стрічки */
 .headerTop p,
 .headerTop a {
-  margin: 0 5px;
-  color: #2d08d3ff;
-  text-decoration: none;
-  font-size: 0.8rem;
+  margin: 0;
+  padding: 0 10px;
 }
 
-.headerTop a:hover {
-  text-decoration: underline;
-}
-
-/* Відображення на малих екранах */
-@media (max-width: 968px) {
+/* Мобільний вигляд */
+@media (max-width: 1200px) {
+  /* Зміни для хедера на малих екранах */
   .headerTop {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40ch; /* Ширина меню */
-    height: 30vh;
-    background-color: #f1d94fff;
-    padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-
-  /* Показує контакти при відкритому меню */
-  .headerTop.show {
     display: flex;
+    flex-direction: column; /* Перехід на стовпчик */
+    align-items: center;
+    position: relative; /* Дозволяє бургеру бути абсолютним всередині цього контейнера */
   }
 
-  /* Бургер-кнопка для малих екранів */
+  /* Показуємо бургер кнопку */
   .burgerButton {
+    display: block;
+    right: 20px; /* Розташовує бургер-кнопку справа */
+    top: 50%;
+    transform: translateY(-10%); /* Центрує бургер по вертикалі */
+  }
+
+  /* Контент контактної стрічки має бути адаптивним */
+  .headerTop p,
+  .headerTop a {
+    width: 100%;
+    text-align: center; /* Центруємо текст */
+  }
+
+  /* Переключення видимості бургер-меню */
+  .burgerMenu {
+    position: absolute;
+    top: 60px; /* Відступ від бургер-кнопки */
+    right: 20px; /* Відступ справа */
+    width: 200px; /* Ширина бургер-меню */
+    display: none; /* Сховати меню по замовчуванню */
+  }
+
+  /* При зменшенні екрану відразу показуємо бургер */
+  .burgerMenu.show {
     display: block;
   }
 
-  /* Бургер-кнопка для малих екранів */
-  .burgerButton {
+  .headerTop.hidden {
+    display: none;
+  }
+
+  .headerTop.show {
     display: block;
-    top: 1px; /* Піднімаємо кнопку трохи вгору */
-    right: 20px;
   }
 }

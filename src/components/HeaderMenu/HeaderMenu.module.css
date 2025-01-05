@@ -1,13 +1,39 @@
-.header {
+.headerWrapper {
+  position: fixed; /* Фіксоване положення */
+  top: 50px; /* Відступ від верхньої частини екрана */
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Менший z-index, щоб HeaderMenu був нижчим */
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.headerContainer {
+  max-width: 1200px; /* Ширина контейнера */
+  margin: 0 auto; /* Центрування */
+  padding: 0 15px; /* Відступи */
+  display: flex; /* Для флекс-контейнера */
+  justify-content: space-between; /* Розміщення контенту */
+  align-items: center; /* Вертикальне вирівнювання */
+}
+
+/* .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #fcf8f8ff;
   border-bottom: 1px solid #c5bcbc;
-  position: sticky; /* Закріплює хедер у верхній частині */
+  position: sticky; 
   top: 0;
   z-index: 1000;
+} */
+
+.header {
+  padding: 10px 0;
+  background-color: #fcf8f8ff;
+  border-bottom: 1px solid #c5bcbc;
 }
 
 .logo {
@@ -20,13 +46,13 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  position: relative;
+  /* position: relative; */
 }
 
 .nav {
   display: flex;
   gap: 15px;
-  flex-wrap: 1; /* Щоб компоненти переносилися на новий рядок, якщо місця недостатньо */
+  /* flex-wrap: 1;  */
 }
 
 .menuItem {
@@ -45,28 +71,28 @@
   padding: 5px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  z-index: 1000;
+  gap: 3px;
+  z-index: 900;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.menuItem:hover .subMenu {
-  opacity: 1;
-  visibility: visible;
+.subMenuColumn p {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .subMenuColumn {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 5px; /* Відстань між елементами */
 }
-
-/* .burger {
-  display: none;
-  cursor: pointer;
-} */
+.menuItem:hover .subMenu {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* Стилі для бургер-меню */
 .burger {
@@ -79,16 +105,13 @@
 
 .burgerMenu {
   position: absolute;
+  right: 0;
   top: 100%;
-  right: 10px;
-  background-color: #fcd734;
-  border: 1px solid hsl(49, 93%, 33%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
+  z-index: 900;
 }
 
 /* Медіазапити для адаптивності */

@@ -1,15 +1,22 @@
+/* Breadcrumb.module.css */
+
 .breadcrumb {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  color: #555;
+  position: fixed; /* Фіксуємо крихти під хедером */
+  top: var(--header-height); /* Встановлюємо їх прямо під хедером */
+  left: 20px; /* Відступ зліва */
+  background-color: #f9fcfb; /* Фон */
+  z-index: 999; /* Вища пріоритетність */
+  padding: 5px 10px; /* Внутрішній відступ для естетики */
+  border-radius: 4px; /* Закруглення країв */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкий тіньовий ефект */
+  display: inline-block; /* Ширина за розміром тексту */
+  border: 1px solid #ddd; /* Рамка для відокремлення */
 }
 
 .breadcrumb a {
-  text-decoration: none;
-  color: #0070f3;
+  text-decoration: none; /* Видаляємо підкреслення */
+  color: #1b0a0aff; /* Основний колір тексту */
+  font-size: 14px; /* Розмір шрифту */
 }
 
 .breadcrumb a:hover {
@@ -19,4 +26,14 @@
 .breadcrumb .active {
   font-weight: bold;
   color: #000;
+}
+
+.breadcrumb > span::after {
+  content: '>';
+  margin: 0 5px;
+  color: #ccc;
+}
+
+.breadcrumb > span:last-child::after {
+  content: '';
 }

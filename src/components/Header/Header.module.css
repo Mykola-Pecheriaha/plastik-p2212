@@ -1,0 +1,65 @@
+/* Header.module.css */
+
+/* Загальний стиль для хедера */
+.headerWrapper {
+  width: 100%;
+  background-color: #f8f9fa;
+  margin-top: 0;
+}
+
+/* Стиль для HeaderTop */
+.headerTop {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+/* Стиль для HeaderMenu */
+.headerMenu {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #555;
+  position: sticky; /* Прикріплення під HeaderMenu */
+  top: 0; /* Закріпити зверху сторінки, щоб не зникало */
+  z-index: 1; /* Щоб не перекривалося іншими елементами */
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #0070f3;
+  margin-right: 5px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .active {
+  font-weight: bold;
+  color: #000;
+}
+
+.breadcrumb > span::after {
+  content: '>';
+  margin: 0 5px;
+  color: #ccc;
+}
+
+.breadcrumb > span:last-child::after {
+  content: '';
+}
+
+/* Стиль для основного контенту */
+.mainContent {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px; /* Доданий відступ, щоб контент не накладався на Breadcrumb */
+}

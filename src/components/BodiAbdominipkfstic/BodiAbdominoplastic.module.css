@@ -7,6 +7,12 @@
   background-color: #f9f9f9; /* Світлий фон для відображення контенту */
 }
 
+.pageContainer {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 50px; /* Відступ після Breadcrumb */
+}
+
 .containerBodiAb {
   display: flex;
   flex-direction: row; /* Розташування елементів в рядок */
@@ -14,6 +20,9 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px; /* Відступ після Breadcrumb */
 }
 
 .bodiAbText {
